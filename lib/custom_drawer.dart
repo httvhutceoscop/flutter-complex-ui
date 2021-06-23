@@ -117,7 +117,7 @@ class _CustomDrawerState extends State<CustomDrawer>
   Widget myChild() {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("HOME"),
+        title: const Text("Custom Drawer"),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -138,6 +138,12 @@ class _CustomDrawerState extends State<CustomDrawer>
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.home),
+                label: const Text("Back to home"))
           ],
         ),
       ),
